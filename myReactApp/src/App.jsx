@@ -1,11 +1,11 @@
+import { Outlet } from "react-router-dom"
 
-import LandingScreen from './components/LandingScreen'
 
 function App() {
 
   return (
     <>
-      <LandingScreen />
+      <Outlet />
     </>
   )
 }
