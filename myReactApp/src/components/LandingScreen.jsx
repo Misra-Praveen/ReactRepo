@@ -1,10 +1,10 @@
 import React from 'react'
+import Common from './Common'
 
 const LandingScreen = () => {
   return (
     <div id='landingScreen'>
-        <h1>Welcome to PopX</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        <Common h1Text={"Welcome to PopX"} />
         <button className='btn' id='btn-create'>Create Account</button>
         <button className='btn' id='btn-login'>Already Registered? Login</button>
     </div>
