@@ -7,6 +7,7 @@ div{
   width: 375px;
   height: 100vh;
   padding: 20px;
+  margin: auto;
   
 }
 
@@ -44,6 +45,7 @@ label{
   top: -10px;
   max-width: fit-content;
   height:17px;
+  padding:0px 2px;
   color: #6C25FF;
   border-radius: 6px;
   opacity: 1;
@@ -66,7 +68,7 @@ input{
   justify-content: end;
   align-items: start;
 }
-#loginScreen{
+#loginScreen, #signupScreen{
   background-color: #F7F8F9;
   display: flex;
   flex-direction: column;
@@ -88,6 +90,11 @@ input{
   background: #CBCBCB 0% 0% no-repeat padding-box;
   color: #FFFFFF;
 }
+#btn-signup{
+  background: #6C25FF 0% 0% no-repeat padding-box;
+  color: #FFFFFF;
+  margin-top: 50%;
+}
 
 .btn {
   margin-top: 10px;
@@ -108,8 +115,9 @@ input{
 
 @media (max-width: 768px) {
   div {
-    max-width: 100vw;
+    max-width: 100%;
     padding: 10px;
     border: none;
+    margin: 0px;
   }
 }

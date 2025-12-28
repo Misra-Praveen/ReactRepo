@@ -4,8 +4,13 @@ const Common = (props) => {
   return (
     <>
         <h1>{props.h1Text}</h1>
-        <h1>{props.h1Text2}</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        {
+          props.h1Text2 && <h1>{props.h1Text2}</h1>
+        }
+        
+        {
+          props.pText && <p>{props.pText}</p>
+        }
     </>
   )
 }

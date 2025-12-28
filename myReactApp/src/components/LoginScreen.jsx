@@ -9,7 +9,7 @@ const LoginScreen = () => {
     }
   return (
     <div id='loginScreen'>
-        <Common h1Text={`Signin to your`} h1Text2={"PopX Account"} className="commonLogin"/>
+        <Common h1Text="Signin to your" h1Text2="PopX Account" pText="Lorem ipsum dolor sit amet, consectetur adipisicing elit." className="commonLogin"/>
         <form onSubmit={handleSubmit}>
             <article>
                 <label>Email Address</label>

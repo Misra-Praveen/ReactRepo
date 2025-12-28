@@ -6,6 +6,7 @@ import App from './App.jsx'
 
 const LandingScreen = lazy(()=>import("./components/LandingScreen.jsx"))
 const LoginScreen = lazy(()=>import("./components/LoginScreen.jsx"))
+const SignupScreen = lazy(()=>import("./components/SignupScreen.jsx"))
 
 const appRouter = createBrowserRouter([
   {
@@ -22,6 +23,12 @@ const appRouter = createBrowserRouter([
         path:"/login",
         element: (<Suspense fallback="Loading...">
           <LoginScreen />
+        </Suspense>)
+      },
+      {
+        path:"/signup",
+        element: (<Suspense fallback="Loading...">
+          <SignupScreen />
         </Suspense>)
       }
     ]
