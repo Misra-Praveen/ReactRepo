@@ -1,16 +1,39 @@
-# React + Vite
+# PopX Authentication App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React.js application that implements a complete **Signup → Login → Profile** flow using dummy data storage.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Live Demo
+🔗 https://react-repo-theta.vercel.app/
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Features
+- User Signup with form validation
+- Login authentication using stored user data
+- Profile page displaying user details
+- Data persistence using **localStorage**
+- Responsive UI for all screen sizes
+- Client-side routing using **React Router DOM**
+- Deployed on **Vercel**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+- **React.js**
+- **React Router DOM**
+- **CSS (Responsive Design)**
+- **LocalStorage**
+- **Vercel (Deployment)**
+
+---
+
+## 🧠 Application Flow
+1. User signs up and details are stored in localStorage
+2. User logs in using registered credentials
+3. On successful login, user is redirected to Profile page
+4. Profile page displays the user information entered during signup
+
+---
+

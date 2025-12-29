@@ -8,7 +8,7 @@ const Profile = () => {
     const {user} = location.state;
 
   return (
-    <div className='Screen' style={{ padding:"0px",margin:"0px", background:"#F7F8F9 0% 0% no-repeat padding-box", opacity: "1"}}>
+    <div className='Screen' style={{ background:"#F7F8F9 0% 0% no-repeat padding-box", opacity: "1"}}>
         <p style={{width:"100%",fontSize:"24px", margin:"0px", alignContent:"end", padding:"10px 10px 0px 5px",background:"#FFFFFF 0% 0% no-repeat padding-box", opacity: "1"}}>Account Settings</p>
         <div style={{width:"100%", padding:"10px", display:"flex", flexWrap:"wrap", 
         flexDirection:"column",justifyContent:"start", alignItems:"start"}}>
