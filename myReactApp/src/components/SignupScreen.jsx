@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import Common from './Common'
+import { useNavigate } from 'react-router-dom';
 
 const SignupScreen = () => {
+    const [isLoading, setIsLoading] = useState(false)
     const[form, setForm ] = useState({
         name:"",
         phoneNumber : "",
@@ -10,14 +12,28 @@ const SignupScreen = () => {
         companyName: "",
         isAgency :""
     });
+    const navigate = useNavigate()
 
     const handleSubmit = (e)=>{
         e.preventDefault();
+        setIsLoading(true)
+
+        const phonePattern = /^\d{10}$/;
+        
+        if(!phonePattern.test(form.phoneNumber)){
+            setIsLoading(false)
+            return alert("Enter a 10 digit numeric value of phone number")
+        }
+
+        localStorage.setItem("user", JSON.stringify(form))
+        alert("Signup successful, Please login");
+        setIsLoading(false)
+        navigate("/login")
     }
   return (
-    <div id="signupScreen">
+    <div className='Screen' id="signupScreen">
         <Common h1Text="Create Your" h1Text2="PopX Account" pText="" />
-        <form  onSubmit={handleSubmit}>
+        <form style={{width:"100%", }} onSubmit={handleSubmit}>
             <article>
                 <label>Name<sup style={{color:"red"}}>*</sup></label>
                 <input type='text' placeholder='Enter your name' 
@@ -27,8 +43,9 @@ const SignupScreen = () => {
             </article>
             <article>
                 <label>Phone Number<sup style={{color:"red"}}>*</sup></label>
-                <input type='text' placeholder='Enter phone number' 
+                <input type='tel' placeholder='Enter phone number' 
                 value={form.phoneNumber}
+                maxLength={10}
                 onChange={(e)=>setForm({...form, phoneNumber:e.target.value})}    
                 required />
             </article>
@@ -48,7 +65,7 @@ const SignupScreen = () => {
             </article>
             <article>
                 <label>Company Name<sup style={{color:"red"}}>*</sup></label>
-                <input type='email' placeholder='Enter company name' 
+                <input type='text' placeholder='Enter company name' 
                 value={form.companyName}
                 onChange={(e)=>setForm({...form, companyName: e.target.value})}
                 required />
@@ -72,7 +89,7 @@ const SignupScreen = () => {
                     <strong>No</strong>
                 </div>  
             </article>
-            <button type='submit' className='btn' id='btn-signup'>Create Account</button>
+            <button type='submit' className='btn' id='btn-signup'>{ isLoading? "Submitting" : "Create Account"}</button>
         </form>
 
     </div>

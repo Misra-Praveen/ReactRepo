@@ -7,6 +7,7 @@ import App from './App.jsx'
 const LandingScreen = lazy(()=>import("./components/LandingScreen.jsx"))
 const LoginScreen = lazy(()=>import("./components/LoginScreen.jsx"))
 const SignupScreen = lazy(()=>import("./components/SignupScreen.jsx"))
+const Profile = lazy(()=>import('./components/Profile.jsx'))
 
 const appRouter = createBrowserRouter([
   {
@@ -29,6 +30,12 @@ const appRouter = createBrowserRouter([
         path:"/signup",
         element: (<Suspense fallback="Loading...">
           <SignupScreen />
+        </Suspense>)
+      },
+      {
+        path:"/profile",
+        element: (<Suspense fallback="Loading...">
+          <Profile />
         </Suspense>)
       }
     ]
